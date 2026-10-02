@@ -1,0 +1,752 @@
+{
+  "generated_at": "2026-10-02T22:11:03",
+  "total": 51,
+  "tasks": [
+    {
+      "id": "T01",
+      "level": "easy",
+      "task": "请计算 （123 + 456）× 2 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 1158.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T02",
+      "level": "easy",
+      "task": "请计算 8888 ÷ 8 + 111 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 1222.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T03",
+      "level": "easy",
+      "task": "请计算 （15 + 27）× 3 - 40 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 86.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T04",
+      "level": "easy",
+      "task": "请计算 3600 ÷ 60 × 7 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 420.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T05",
+      "level": "easy",
+      "task": "请计算 12.5 × 8 + 37.5 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 137.5,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T06",
+      "level": "easy",
+      "task": "请计算 （100 - 23）× 4 ÷ 2 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 154.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T07",
+      "level": "easy",
+      "task": "请计算 999 + 1001 - 750 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 1250.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T08",
+      "level": "easy",
+      "task": "请计算 7 × 8 × 9 ÷ 6 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 84.0,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "纯计算，检验是否会心算偷懒"
+    },
+    {
+      "id": "T09",
+      "level": "easy",
+      "task": "employees 表（员工表）一共有多少名员工？",
+      "checker": {
+        "type": "number",
+        "value": 10,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "单表 COUNT"
+    },
+    {
+      "id": "T10",
+      "level": "easy",
+      "task": "employees 表中工资最高的员工叫什么名字？",
+      "checker": {
+        "type": "contains",
+        "value": "李娜"
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "排序取极值"
+    },
+    {
+      "id": "T11",
+      "level": "easy",
+      "task": "所有员工的平均工资是多少元（取整数即可）？",
+      "checker": {
+        "type": "number",
+        "value": 23850,
+        "tol": 1.0
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "聚合 AVG"
+    },
+    {
+      "id": "T12",
+      "level": "easy",
+      "task": "employees 表中最高的工资是多少元？",
+      "checker": {
+        "type": "number",
+        "value": 32000,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "MAX"
+    },
+    {
+      "id": "T13",
+      "level": "easy",
+      "task": "今天是几号？请给出具体日期。",
+      "checker": {
+        "type": "today"
+      },
+      "expect_tools": [
+        "current_date"
+      ],
+      "note": "禁止靠训练记忆回答日期"
+    },
+    {
+      "id": "T14",
+      "level": "easy",
+      "task": "今天是星期几？",
+      "checker": {
+        "type": "weekday"
+      },
+      "expect_tools": [
+        "current_date"
+      ],
+      "note": "同上"
+    },
+    {
+      "id": "T15",
+      "level": "easy",
+      "task": "现在是几月份？请查一下当前日期后告诉我。",
+      "checker": {
+        "type": "month"
+      },
+      "expect_tools": [
+        "current_date"
+      ],
+      "note": "同上"
+    },
+    {
+      "id": "T16",
+      "level": "easy",
+      "task": "原价 899 元的商品打 8 折，折后价格是多少元？",
+      "checker": {
+        "type": "number",
+        "value": 719.2,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "业务场景算术"
+    },
+    {
+      "id": "T17",
+      "level": "easy",
+      "task": "一件商品成本 120 元，售价 199 元，利润率是多少百分比（保留一位小数）？",
+      "checker": {
+        "type": "number",
+        "value": 65.8,
+        "tol": 0.6
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "百分比计算"
+    },
+    {
+      "id": "T18",
+      "level": "easy",
+      "task": "departments 表里一共有几个部门？",
+      "checker": {
+        "type": "number",
+        "value": 4,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "单表 COUNT"
+    },
+    {
+      "id": "T19",
+      "level": "easy",
+      "task": "employees 表中工资最低的员工叫什么名字？",
+      "checker": {
+        "type": "contains",
+        "value": "赵敏"
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "升序取极值"
+    },
+    {
+      "id": "T20",
+      "level": "easy",
+      "task": "请计算 45 × 12 + 380 的结果是多少？",
+      "checker": {
+        "type": "number",
+        "value": 920,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "calculator"
+      ],
+      "note": "混合运算"
+    },
+    {
+      "id": "T21",
+      "level": "medium",
+      "task": "先算出研发部的平均工资，再算出销售部的平均工资，告诉我前者比后者高多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": 8500,
+        "tol": 1.5
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "JOIN + 差值计算"
+    },
+    {
+      "id": "T22",
+      "level": "medium",
+      "task": "先算出市场部的平均工资，再算出运营部的平均工资，告诉我前者比后者高多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": -2000,
+        "tol": 1.5
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "JOIN + 差值计算"
+    },
+    {
+      "id": "T23",
+      "level": "medium",
+      "task": "先算出研发部的平均工资，再算出市场部的平均工资，告诉我前者比后者高多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": 5833,
+        "tol": 1.5
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "JOIN + 差值计算"
+    },
+    {
+      "id": "T24",
+      "level": "medium",
+      "task": "先算出运营部的平均工资，再算出销售部的平均工资，告诉我前者比后者高多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": 4667,
+        "tol": 1.5
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "JOIN + 差值计算"
+    },
+    {
+      "id": "T25",
+      "level": "medium",
+      "task": "研发部有多少名员工？请用 JOIN 查询 departments 和 employees 表得到答案。",
+      "checker": {
+        "type": "number",
+        "value": 3,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "隐式 JOIN"
+    },
+    {
+      "id": "T26",
+      "level": "medium",
+      "task": "统计 2021 年入职的员工人数是多少？",
+      "checker": {
+        "type": "number",
+        "value": 3,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "日期字符串过滤"
+    },
+    {
+      "id": "T27",
+      "level": "medium",
+      "task": "统计研发部的员工人数，并把结果写入文件 headcount_研发部.txt（内容里要有具体人数）。",
+      "checker": {
+        "type": "file_contains",
+        "path": "headcount_研发部.txt",
+        "value": "3"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "查询 → 落盘"
+    },
+    {
+      "id": "T28",
+      "level": "medium",
+      "task": "统计销售部的员工人数，并把结果写入文件 headcount_销售部.txt（内容里要有具体人数）。",
+      "checker": {
+        "type": "file_contains",
+        "path": "headcount_销售部.txt",
+        "value": "3"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "查询 → 落盘"
+    },
+    {
+      "id": "T29",
+      "level": "medium",
+      "task": "统计市场部的员工人数，并把结果写入文件 headcount_市场部.txt（内容里要有具体人数）。",
+      "checker": {
+        "type": "file_contains",
+        "path": "headcount_市场部.txt",
+        "value": "2"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "查询 → 落盘"
+    },
+    {
+      "id": "T30",
+      "level": "medium",
+      "task": "统计运营部的员工人数，并把结果写入文件 headcount_运营部.txt（内容里要有具体人数）。",
+      "checker": {
+        "type": "file_contains",
+        "path": "headcount_运营部.txt",
+        "value": "2"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "查询 → 落盘"
+    },
+    {
+      "id": "T31",
+      "level": "medium",
+      "task": "先计算 365 × 24，再把计算结果写入文件 calc_367.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "calc_367.txt",
+        "value": "8760"
+      },
+      "expect_tools": [
+        "calculator",
+        "file_write"
+      ],
+      "note": "计算 → 落盘"
+    },
+    {
+      "id": "T32",
+      "level": "medium",
+      "task": "先计算 1024 × 8，再把计算结果写入文件 calc_39.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "calc_39.txt",
+        "value": "8192"
+      },
+      "expect_tools": [
+        "calculator",
+        "file_write"
+      ],
+      "note": "计算 → 落盘"
+    },
+    {
+      "id": "T33",
+      "level": "medium",
+      "task": "先计算 （88 + 12）× 15，再把计算结果写入文件 calc_943.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "calc_943.txt",
+        "value": "1500"
+      },
+      "expect_tools": [
+        "calculator",
+        "file_write"
+      ],
+      "note": "计算 → 落盘"
+    },
+    {
+      "id": "T34",
+      "level": "medium",
+      "task": "把文本「项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线」写入 todo.txt，然后读出来确认内容无误。",
+      "checker": {
+        "type": "file_contains",
+        "path": "todo.txt",
+        "value": "Agent 调度模块"
+      },
+      "expect_tools": [
+        "file_write",
+        "file_read"
+      ],
+      "note": "写 → 读闭环"
+    },
+    {
+      "id": "T35",
+      "level": "medium",
+      "task": "运营部的平均工资比全公司平均工资高多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": 650,
+        "tol": 1.5
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "嵌套比较"
+    },
+    {
+      "id": "T36",
+      "level": "medium",
+      "task": "如果给所有员工涨薪 10%，公司每月要多支出多少元（取整数）？",
+      "checker": {
+        "type": "number",
+        "value": 23850,
+        "tol": 2.0
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "SUM + 比例"
+    },
+    {
+      "id": "T37",
+      "level": "medium",
+      "task": "把全公司员工的平均工资（取整数）写入文件 avg_salary.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "avg_salary.txt",
+        "value": "23850"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "聚合 → 落盘"
+    },
+    {
+      "id": "T38",
+      "level": "medium",
+      "task": "2021 年入职的员工占全公司总人数的百分比是多少（保留一位小数）？把结果写入 ratio2021.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "ratio2021.txt",
+        "value": "30.0"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator",
+        "file_write"
+      ],
+      "note": "过滤 + 比例 + 落盘"
+    },
+    {
+      "id": "T39",
+      "level": "medium",
+      "task": "在 2020 年及以前入职、且工资高于 20000 元的员工有多少人？",
+      "checker": {
+        "type": "number",
+        "value": 4,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "多条件过滤"
+    },
+    {
+      "id": "T40",
+      "level": "medium",
+      "task": "工资高于全公司平均工资的员工有多少人？",
+      "checker": {
+        "type": "number",
+        "value": 5,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "子查询/两步"
+    },
+    {
+      "id": "T41",
+      "level": "hard",
+      "task": "统计每个部门的平均工资，找出平均工资最高的那个部门，把部门名称和它的平均工资写入 best_dept.md。",
+      "checker": {
+        "type": "file_contains",
+        "path": "best_dept.md",
+        "value": "研发部"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "聚合 → 比较 → 落盘"
+    },
+    {
+      "id": "T42",
+      "level": "hard",
+      "task": "请做一份简易人力成本报告：先算出公司月度工资总额（SUM），再算出年度总额（×12），最后把这两个数字写入 cost_report.md。",
+      "checker": {
+        "type": "file_contains",
+        "path": "cost_report.md",
+        "value": "238500"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator",
+        "file_write"
+      ],
+      "note": "三步链式"
+    },
+    {
+      "id": "T43",
+      "level": "hard",
+      "task": "工资高于全公司平均工资的员工占总人数的百分比是多少（保留一位小数）？",
+      "checker": {
+        "type": "number",
+        "value": 50.0,
+        "tol": 0.6
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "两步 + 百分比"
+    },
+    {
+      "id": "T44",
+      "level": "hard",
+      "task": "先查今天是几号，再算出距离今年 12 月 31 日还有多少天，把天数写入 countdown.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "countdown.txt",
+        "value": "90"
+      },
+      "expect_tools": [
+        "current_date",
+        "calculator",
+        "file_write"
+      ],
+      "note": "日期 → 计算 → 落盘"
+    },
+    {
+      "id": "T45",
+      "level": "hard",
+      "task": "先搜索「什么是 MCP」，再把搜索结果的摘要写入 mcp_note.md。",
+      "checker": {
+        "type": "file_contains",
+        "path": "mcp_note.md",
+        "value": "MCP"
+      },
+      "expect_tools": [
+        "web_search",
+        "file_write"
+      ],
+      "note": "外部信息 → 落盘"
+    },
+    {
+      "id": "T46",
+      "level": "hard",
+      "task": "公司内最高工资与最低工资的差距是多少元？并把差距占最高工资的比例（百分比，保留一位小数）一并告诉我。",
+      "checker": {
+        "type": "number",
+        "value": 14000,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator"
+      ],
+      "note": "双目标输出"
+    },
+    {
+      "id": "T47",
+      "level": "hard",
+      "task": "先把「1. 需求分析\n2. 原型设计\n3. 开发联调」写入 plan.md，然后读回文件，告诉我一共有几个步骤。",
+      "checker": {
+        "type": "number",
+        "value": 3,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "file_write",
+        "file_read",
+        "calculator"
+      ],
+      "note": "写读 + 归纳"
+    },
+    {
+      "id": "T48",
+      "level": "hard",
+      "task": "在北京办公的部门里共有多少名员工？（城市信息在 departments 表）",
+      "checker": {
+        "type": "number",
+        "value": 3,
+        "tol": 0.51
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "跨表两跳"
+    },
+    {
+      "id": "T49",
+      "level": "hard",
+      "task": "给我一份员工名单：写出工资排名前三的员工姓名，并用逗号分隔写进 top3.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "top3.txt",
+        "value": "李娜"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "file_write"
+      ],
+      "note": "排序 → 落盘"
+    },
+    {
+      "id": "T50",
+      "level": "hard",
+      "task": "如果研发部全员涨薪 15%，研发部新的月工资总额是多少元（取整数）？把结果写入 dev_new_total.txt。",
+      "checker": {
+        "type": "file_contains",
+        "path": "dev_new_total.txt",
+        "value": "97750"
+      },
+      "expect_tools": [
+        "sqlite_query",
+        "calculator",
+        "file_write"
+      ],
+      "note": "JOIN + 比例 + 落盘"
+    },
+    {
+      "id": "T51",
+      "level": "hard",
+      "task": "请告诉我三件事：公司总人数、平均工资（取整数）、以及人数最多的部门。三项都要回答。",
+      "checker": {
+        "type": "multi",
+        "values": [
+          {
+            "type": "number",
+            "value": 10,
+            "tol": 0.51
+          },
+          {
+            "type": "number",
+            "value": 23850,
+            "tol": 1.0
+          }
+        ]
+      },
+      "expect_tools": [
+        "sqlite_query"
+      ],
+      "note": "多目标输出，检验是否漏答"
+    }
+  ]
+}
