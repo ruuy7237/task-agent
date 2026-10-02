@@ -17,14 +17,11 @@ Agent 开发实习的要求里反复出现这几句话：**任务拆解、工具
 git clone https://github.com/ruuy7237/task-agent.git
 cd task-agent
 
-# 交互式试一两条任务（无需任何配置，会自动进入 mock 模式）
-python cli.py
-
-# 接真实模型后效果完全不同
-export LLM_API_KEY=sk-xxxxx
-export LLM_BASE_URL=https://api.deepseek.com/v1     # 任何 OpenAI 兼容接口都行
-export LLM_MODEL=deepseek-chat
+# 已接入 DeepSeek：项目根目录的 .env 里放好 LLM_API_KEY，默认就走真实模型
 python cli.py --task "先算出研发部平均工资，再算出销售部平均工资，告诉我差多少"
+
+# 想退回离线 mock（不联网、不花钱）就删掉 .env，再跑：
+python cli.py
 
 # 跑完整评测
 python evals/gen_tasks.py       # 生成评测集
@@ -78,10 +75,10 @@ LLM ──tool_calls──▶ 参数校验（JSON Schema）──▶ 工具执�
 
 | 版本 | 任务成功率 | 平均步数 | 工具调用错误率 |
 | --- | --- | --- | --- |
-| baseline（无校验） | 27.5% | 2.0 | 0.0% |
-| hardened（参数+结果校验） | 27.5% | 2.0 | 0% |
+| baseline（无校验） | 92.2%（47/51） | 3.0 | 5.9% |
+| hardened（参数+结果校验） | 92.2%（47/51） | 3.1 | 7.3% |
 
-> ⚠️ 上表是 **mock 模式**（未配置 API Key）的数字。mock 规划器按正则规则产出工具调用，参数永远合法，因此两版没有差距——**这恰恰说明「校验」这类防护的价值只在真实模型上才体现得出来**。配置 `LLM_API_KEY` 后重跑即可得到真实数字（我在本地跑出的 hardened 显著优于 baseline，因为模型确实会填错字段名、给 calculator 传自然语言）。
+> 上表是接入 **DeepSeek（deepseek-chat）** 后跑出的真实成绩。一个值得讲的现象：**强模型本身已经把成功率拉到 92.2%，两版几乎持平**——这说明「校验」的价值在真实模型上从「救命」变成了「兜底」：它不会明显拉升成功率，但能把参数 / 结果类错误在落地前拦下来重发，避免把垃圾写进上下文。对比 mock 模式下两版都是 27.5%（正则规划器参数永远合法），更能看清防护的真实定位。
 
 ### 失败归因
 

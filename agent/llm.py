@@ -18,6 +18,26 @@ import urllib.error
 import urllib.request
 import uuid
 
+
+def _load_env():
+    """可选：从项目根目录的 .env 读取 API Key，免得配系统环境变量。"""
+    try:
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        for cand in (os.path.join(root, ".env"), os.path.join(os.getcwd(), ".env")):
+            if os.path.exists(cand):
+                for line in open(cand, encoding="utf-8"):
+                    line = line.strip()
+                    if not line or line.startswith("#") or "=" not in line:
+                        continue
+                    k, v = line.split("=", 1)
+                    os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+                break
+    except Exception:
+        pass
+
+
+_load_env()
+
 BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
 API_KEY = os.getenv("LLM_API_KEY", "")
 MODEL = os.getenv("LLM_MODEL", "deepseek-chat")

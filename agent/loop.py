@@ -60,7 +60,9 @@ def run(task, llm, max_steps=8, verify=True, verbose=False):
 
         # ---- 分支 A：模型要调工具 ----------------------------------------
         if calls:
-            assistant_msg = {"role": "assistant", "content": msg.get("content") or "", "tool_calls": []}
+            # 关键：必须把模型真实的 tool_calls 原样回填，否则下一轮附带的
+            # tool 结果消息会因「找不到对应 tool_call」被 DeepSeek 拒回 400。
+            assistant_msg = {"role": "assistant", "content": msg.get("content") or "", "tool_calls": calls}
             tool_messages = []
 
             for raw in calls:

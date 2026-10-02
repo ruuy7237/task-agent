@@ -1,55 +1,55 @@
 {
-  "model": "deepseek-chat (mock 模式)",
-  "generated_at": "2026-10-02T22:11:03",
+  "model": "deepseek-chat (api 模式)",
+  "generated_at": "2026-10-02T23:45:40",
   "baseline": {
     "total": 51,
-    "success": 14,
-    "success_rate": 27.5,
-    "avg_steps": 2.0,
-    "tool_calls": 67,
-    "tool_errors": 0,
-    "tool_error_rate": 0.0,
+    "success": 47,
+    "success_rate": 92.2,
+    "avg_steps": 3.02,
+    "tool_calls": 119,
+    "tool_errors": 7,
+    "tool_error_rate": 5.9,
     "by_level": {
       "easy": {
         "total": 20,
-        "ok": 7,
-        "rate": 35.0
+        "ok": 18,
+        "rate": 90.0
       },
       "medium": {
         "total": 20,
-        "ok": 4,
-        "rate": 20.0
+        "ok": 19,
+        "rate": 95.0
       },
       "hard": {
         "total": 11,
-        "ok": 3,
-        "rate": 27.3
+        "ok": 10,
+        "rate": 90.9
       }
     }
   },
   "hardened": {
     "total": 51,
-    "success": 14,
-    "success_rate": 27.5,
-    "avg_steps": 2.0,
-    "tool_calls": 67,
-    "tool_errors": 0,
-    "tool_error_rate": 0.0,
+    "success": 47,
+    "success_rate": 92.2,
+    "avg_steps": 3.08,
+    "tool_calls": 123,
+    "tool_errors": 9,
+    "tool_error_rate": 7.3,
     "by_level": {
       "easy": {
         "total": 20,
-        "ok": 7,
-        "rate": 35.0
+        "ok": 18,
+        "rate": 90.0
       },
       "medium": {
         "total": 20,
-        "ok": 4,
-        "rate": 20.0
+        "ok": 19,
+        "rate": 95.0
       },
       "hard": {
         "total": 11,
-        "ok": 3,
-        "rate": 27.3
+        "ok": 10,
+        "rate": 90.9
       }
     }
   },
@@ -58,9 +58,9 @@
       "id": "T01",
       "level": "easy",
       "task": "请计算 （123 + 456）× 2 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 1158.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "（123 + 456）× 2 = **1158**。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -69,8 +69,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "1158"
         }
       ]
     },
@@ -78,9 +78,9 @@
       "id": "T02",
       "level": "easy",
       "task": "请计算 8888 ÷ 8 + 111 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 1222.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "8888 ÷ 8 + 111 = 1111 + 111 = **1222**。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -89,8 +89,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "1222"
         }
       ]
     },
@@ -98,9 +98,9 @@
       "id": "T03",
       "level": "easy",
       "task": "请计算 （15 + 27）× 3 - 40 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 86.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "（15 + 27）× 3 - 40 = 86。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -109,8 +109,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "86"
         }
       ]
     },
@@ -118,9 +118,9 @@
       "id": "T04",
       "level": "easy",
       "task": "请计算 3600 ÷ 60 × 7 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 420.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "3600 ÷ 60 × 7 = 420。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -129,8 +129,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "420"
         }
       ]
     },
@@ -138,9 +138,9 @@
       "id": "T05",
       "level": "easy",
       "task": "请计算 12.5 × 8 + 37.5 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 137.5±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "12.5 × 8 + 37.5 = **137.5**（12.5×8=100，100+37.5=137.5）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -149,8 +149,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "137.5"
         }
       ]
     },
@@ -158,9 +158,9 @@
       "id": "T06",
       "level": "easy",
       "task": "请计算 （100 - 23）× 4 ÷ 2 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 154.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "（100 - 23）× 4 ÷ 2 = 77 × 4 ÷ 2 = **154**。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -169,8 +169,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "154"
         }
       ]
     },
@@ -178,9 +178,9 @@
       "id": "T07",
       "level": "easy",
       "task": "请计算 999 + 1001 - 750 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 1250.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "999 + 1001 - 750 = **1250**。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -189,8 +189,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "1250"
         }
       ]
     },
@@ -198,9 +198,9 @@
       "id": "T08",
       "level": "easy",
       "task": "请计算 7 × 8 × 9 ÷ 6 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 84.0±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "7 × 8 × 9 ÷ 6 = **84**。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -209,8 +209,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "84"
         }
       ]
     },
@@ -218,9 +218,9 @@
       "id": "T09",
       "level": "easy",
       "task": "employees 表（员工表）一共有多少名员工？",
-      "success": false,
-      "reason": "数值不匹配（期望 10±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "employees 表共有 10 名员工（COUNT(*) = 10）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -230,7 +230,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"total\": 10}]"
         }
       ]
     },
@@ -240,7 +240,7 @@
       "task": "employees 表中工资最高的员工叫什么名字？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "answer": "工资最高的员工是**李娜**，月薪 32000。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -250,7 +250,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"李娜\", \"salary\": 32000}]"
         }
       ]
     },
@@ -258,11 +258,11 @@
       "id": "T11",
       "level": "easy",
       "task": "所有员工的平均工资是多少元（取整数即可）？",
-      "success": false,
-      "reason": "数值不匹配（期望 23850±1.0）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "所有员工（共 10 人）的平均工资为 **23850 元**。",
+      "steps": 3,
+      "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -270,7 +270,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"avg_salary\": 23850.0, \"cnt\": 10}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "23850"
         }
       ]
     },
@@ -280,7 +286,7 @@
       "task": "employees 表中最高的工资是多少元？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "answer": "employees 表中最高的工资是 32000 元。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -290,7 +296,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"max_salary\": 32000}]"
         }
       ]
     },
@@ -298,9 +304,9 @@
       "id": "T13",
       "level": "easy",
       "task": "今天是几号？请给出具体日期。",
-      "success": true,
+      "success": false,
       "reason": "未给出今天日期 2026-10-02",
-      "answer": "根据工具结果：{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}",
+      "answer": "今天是 2026 年 10 月 2 日，星期五（当前时间 23:48）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -310,7 +316,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "current_date",
-          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}"
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:48:54\"}"
         }
       ]
     },
@@ -318,9 +324,9 @@
       "id": "T14",
       "level": "easy",
       "task": "今天是星期几？",
-      "success": true,
+      "success": false,
       "reason": "未给出星期 周五",
-      "answer": "根据工具结果：{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}",
+      "answer": "今天是 2026 年 10 月 2 日，星期五。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -330,7 +336,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "current_date",
-          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}"
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:48:56\"}"
         }
       ]
     },
@@ -340,7 +346,7 @@
       "task": "现在是几月份？请查一下当前日期后告诉我。",
       "success": true,
       "reason": "未给出月份 10",
-      "answer": "根据工具结果：{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}",
+      "answer": "现在是 2026 年 10 月（今天是 2026-10-02，周五）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -350,7 +356,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "current_date",
-          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}"
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:48:58\"}"
         }
       ]
     },
@@ -358,9 +364,9 @@
       "id": "T16",
       "level": "easy",
       "task": "原价 899 元的商品打 8 折，折后价格是多少元？",
-      "success": false,
-      "reason": "数值不匹配（期望 719.2±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "原价 899 元的商品打 8 折后价格为 **719.2 元**（899 × 0.8 = 719.2）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -369,8 +375,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "719.2"
         }
       ]
     },
@@ -378,9 +384,9 @@
       "id": "T17",
       "level": "easy",
       "task": "一件商品成本 120 元，售价 199 元，利润率是多少百分比（保留一位小数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 65.8±0.6）",
-      "answer": "根据工具结果：[{\"COUNT(*)\": 10}]",
+      "success": true,
+      "reason": "ok",
+      "answer": "利润率约为 65.8%（毛利 79 元 ÷ 成本 120 元 × 100% = 65.833…%，保留一位小数）。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -389,8 +395,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"COUNT(*)\": 10}]"
+          "tool": "calculator",
+          "detail": "65.83333333333333"
         }
       ]
     },
@@ -400,7 +406,7 @@
       "task": "departments 表里一共有几个部门？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "answer": "departments 表里一共有 4 个部门。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -410,7 +416,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"dept_count\": 4}]"
         }
       ]
     },
@@ -420,7 +426,7 @@
       "task": "employees 表中工资最低的员工叫什么名字？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "answer": "工资最低的员工是**赵敏**，月薪 18000。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -430,7 +436,7 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"赵敏\", \"salary\": 18000}]"
         }
       ]
     },
@@ -438,9 +444,9 @@
       "id": "T20",
       "level": "easy",
       "task": "请计算 45 × 12 + 380 的结果是多少？",
-      "success": false,
-      "reason": "数值不匹配（期望 920±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
+      "success": true,
+      "reason": "ok",
+      "answer": "45 × 12 + 380 = 920。",
       "steps": 2,
       "tool_calls": 1,
       "tool_errors": 0,
@@ -449,8 +455,8 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "tool": "calculator",
+          "detail": "920"
         }
       ]
     },
@@ -458,11 +464,11 @@
       "id": "T21",
       "level": "medium",
       "task": "先算出研发部的平均工资，再算出销售部的平均工资，告诉我前者比后者高多少元（取整数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 8500±1.5）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "研发部平均工资 28333 元，销售部平均工资 19833 元，前者比后者高 **8500 元**。",
+      "steps": 3,
+      "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -470,7 +476,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"研发部\", \"avg_salary\": 28333.333333333332}, {\"name\": \"销售部\", \"avg_salary\": 19833.333333333332}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "8500"
         }
       ]
     },
@@ -480,17 +492,35 @@
       "task": "先算出市场部的平均工资，再算出运营部的平均工资，告诉我前者比后者高多少元（取整数）？",
       "success": false,
       "reason": "数值不匹配（期望 -2000±1.5）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
+      "answer": "市场部平均工资为 22500 元，运营部为 24500 元，前者比后者低 2000 元（即市场部比运营部少 2000 元，而非更高）。",
+      "steps": 5,
+      "tool_calls": 4,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: e.department_id"
+        },
+        {
+          "step": 2,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    city TEXT NOT NULL\\n)\"},"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"市场部\", \"avg_salary\": 22500.0}, {\"name\": \"运营部\", \"avg_salary\": 24500.0}]"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "-2000"
         }
       ]
     },
@@ -498,11 +528,11 @@
       "id": "T23",
       "level": "medium",
       "task": "先算出研发部的平均工资，再算出市场部的平均工资，告诉我前者比后者高多少元（取整数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 5833±1.5）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "研发部平均工资 28333.33 元，市场部平均工资 22500 元，前者比后者高约 5833 元（精确值 5833.33，取整为 5833 元）。",
+      "steps": 3,
+      "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -510,7 +540,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"市场部\", \"avg_salary\": 22500.0}, {\"name\": \"研发部\", \"avg_salary\": 28333.333333333332}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "5833.333333333332"
         }
       ]
     },
@@ -518,11 +554,11 @@
       "id": "T24",
       "level": "medium",
       "task": "先算出运营部的平均工资，再算出销售部的平均工资，告诉我前者比后者高多少元（取整数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 4667±1.5）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "运营部平均工资 24500 元，销售部平均工资约 19833.33 元，前者比后者高约 4666.67 元，取整数为 **4667 元**。",
+      "steps": 3,
+      "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -530,7 +566,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"运营部\", \"avg_salary\": 24500.0}, {\"name\": \"销售部\", \"avg_salary\": 19833.333333333332}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "4666.666666666668"
         }
       ]
     },
@@ -540,17 +582,29 @@
       "task": "研发部有多少名员工？请用 JOIN 查询 departments 和 employees 表得到答案。",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
+      "answer": "研发部共有 3 名员工（通过 departments 与 employees 表按 dept_id 关联统计得出）。",
+      "steps": 4,
+      "tool_calls": 3,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: d.department_name"
+        },
+        {
+          "step": 2,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"departments\", \"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    c"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"研发部\", \"employee_count\": 3}]"
         }
       ]
     },
@@ -560,9 +614,9 @@
       "task": "统计 2021 年入职的员工人数是多少？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "answer": "2021 年入职的员工共 3 人（朱琳 2021-01-25、张伟 2021-03-15、赵敏 2021-09-09）。",
+      "steps": 3,
+      "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -570,7 +624,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"cnt\": 3}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 9, \"name\": \"马云龙\", \"hire_date\": \"2018-08-08\"}, {\"id\": 5, \"name\": \"孙悦\", \"hire_date\": \"2019-05-30\"}, {\"id\": 2, \"nam"
         }
       ]
     },
@@ -578,25 +638,37 @@
       "id": "T27",
       "level": "medium",
       "task": "统计研发部的员工人数，并把结果写入文件 headcount_研发部.txt（内容里要有具体人数）。",
-      "success": false,
-      "reason": "文件 headcount_研发部.txt 缺失或不含 3",
-      "answer": "根据工具结果：已写入 output.txt，共 49 字符 | 统计研发部的员工人数，并把结果写入文件 headcount_研发部.txt（内容里要有具体人数）。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
+      "success": true,
+      "reason": "ok",
+      "answer": "研发部共有 **3 名员工**，结果已写入 headcount_研发部.txt。",
+      "steps": 5,
+      "tool_calls": 4,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 output.txt，共 49 字符"
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: e.department_id"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "统计研发部的员工人数，并把结果写入文件 headcount_研发部.txt（内容里要有具体人数）。"
+          "tool": "sqlite_query",
+          "detail": "[{\"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    city TEXT NOT NULL\\n)\"},"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"研发部\", \"cnt\": 3}, {\"name\": \"销售部\", \"cnt\": 3}, {\"name\": \"市场部\", \"cnt\": 2}, {\"name\": \"运营部\", \"cnt\": 2}]"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 headcount_研发部.txt，共 12 字符"
         }
       ]
     },
@@ -604,25 +676,43 @@
       "id": "T28",
       "level": "medium",
       "task": "统计销售部的员工人数，并把结果写入文件 headcount_销售部.txt（内容里要有具体人数）。",
-      "success": false,
-      "reason": "文件 headcount_销售部.txt 缺失或不含 3",
-      "answer": "根据工具结果：已写入 output.txt，共 49 字符 | 统计销售部的员工人数，并把结果写入文件 headcount_销售部.txt（内容里要有具体人数）。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
+      "success": true,
+      "reason": "ok",
+      "answer": "销售部共有 **3 名员工**，结果已写入 headcount_销售部.txt。",
+      "steps": 4,
+      "tool_calls": 5,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 output.txt，共 49 字符"
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: d.department_name"
         },
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "统计销售部的员工人数，并把结果写入文件 headcount_销售部.txt（内容里要有具体人数）。"
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"研发部\", \"city\": \"上海\"}, {\"id\": 2, \"name\": \"销售部\", \"city\": \"北京\"}, {\"id\": 3, \"name\": \"市场部\", \"city\": \"广州\"},"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"headcount\": 3}]"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 headcount_销售部.txt，共 69 字符"
         }
       ]
     },
@@ -630,25 +720,37 @@
       "id": "T29",
       "level": "medium",
       "task": "统计市场部的员工人数，并把结果写入文件 headcount_市场部.txt（内容里要有具体人数）。",
-      "success": false,
-      "reason": "文件 headcount_市场部.txt 缺失或不含 2",
-      "answer": "根据工具结果：已写入 output.txt，共 49 字符 | 统计市场部的员工人数，并把结果写入文件 headcount_市场部.txt（内容里要有具体人数）。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
+      "success": true,
+      "reason": "ok",
+      "answer": "市场部共有 **2 名员工**，结果已写入 headcount_市场部.txt。",
+      "steps": 5,
+      "tool_calls": 4,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 output.txt，共 49 字符"
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: e.department_id"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "统计市场部的员工人数，并把结果写入文件 headcount_市场部.txt（内容里要有具体人数）。"
+          "tool": "sqlite_query",
+          "detail": "[{\"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    city TEXT NOT NULL\\n)\"},"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"市场部\", \"cnt\": 2}]"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 headcount_市场部.txt，共 12 字符"
         }
       ]
     },
@@ -656,25 +758,37 @@
       "id": "T30",
       "level": "medium",
       "task": "统计运营部的员工人数，并把结果写入文件 headcount_运营部.txt（内容里要有具体人数）。",
-      "success": false,
-      "reason": "文件 headcount_运营部.txt 缺失或不含 2",
-      "answer": "根据工具结果：已写入 output.txt，共 49 字符 | 统计运营部的员工人数，并把结果写入文件 headcount_运营部.txt（内容里要有具体人数）。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
+      "success": true,
+      "reason": "ok",
+      "answer": "运营部共有 **2 名员工**，结果已写入 headcount_运营部.txt。",
+      "steps": 5,
+      "tool_calls": 4,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 output.txt，共 49 字符"
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: d.department_name"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "统计运营部的员工人数，并把结果写入文件 headcount_运营部.txt（内容里要有具体人数）。"
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"departments\", \"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    c"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"市场部\", \"headcount\": 2}, {\"name\": \"研发部\", \"headcount\": 3}, {\"name\": \"运营部\", \"headcount\": 2}, {\"name\": \"销售部\", \"hea"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 headcount_运营部.txt，共 24 字符"
         }
       ]
     },
@@ -682,63 +796,11 @@
       "id": "T31",
       "level": "medium",
       "task": "先计算 365 × 24，再把计算结果写入文件 calc_367.txt。",
-      "success": false,
-      "reason": "文件 calc_367.txt 缺失或不含 8760",
-      "answer": "根据工具结果：已写入 calc_367.txt，共 37 字符 | 先计算 365 × 24，再把计算结果写入文件 calc_367.txt。",
-      "steps": 2,
+      "success": true,
+      "reason": "ok",
+      "answer": "365 × 24 = 8760，已写入 calc_367.txt。",
+      "steps": 3,
       "tool_calls": 2,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 calc_367.txt，共 37 字符"
-        },
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "先计算 365 × 24，再把计算结果写入文件 calc_367.txt。"
-        }
-      ]
-    },
-    {
-      "id": "T32",
-      "level": "medium",
-      "task": "先计算 1024 × 8，再把计算结果写入文件 calc_39.txt。",
-      "success": false,
-      "reason": "文件 calc_39.txt 缺失或不含 8192",
-      "answer": "根据工具结果：已写入 calc_39.txt，共 36 字符 | 先计算 1024 × 8，再把计算结果写入文件 calc_39.txt。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 calc_39.txt，共 36 字符"
-        },
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "先计算 1024 × 8，再把计算结果写入文件 calc_39.txt。"
-        }
-      ]
-    },
-    {
-      "id": "T33",
-      "level": "medium",
-      "task": "先计算 （88 + 12）× 15，再把计算结果写入文件 calc_943.txt。",
-      "success": false,
-      "reason": "文件 calc_943.txt 缺失或不含 1500",
-      "answer": "根据工具结果：100 | 已写入 calc_943.txt，共 42 字符 | 先计算 （88 + 12）× 15，再把计算结果写入文件 calc_943.txt。",
-      "steps": 2,
-      "tool_calls": 3,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -746,19 +808,65 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "calculator",
-          "detail": "100"
+          "detail": "8760"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
           "tool": "file_write",
-          "detail": "已写入 calc_943.txt，共 42 字符"
-        },
+          "detail": "已写入 calc_367.txt，共 16 字符"
+        }
+      ]
+    },
+    {
+      "id": "T32",
+      "level": "medium",
+      "task": "先计算 1024 × 8，再把计算结果写入文件 calc_39.txt。",
+      "success": true,
+      "reason": "ok",
+      "answer": "1024 × 8 = 8192，已写入 calc_39.txt（4 字符）。",
+      "steps": 3,
+      "tool_calls": 2,
+      "tool_errors": 0,
+      "failure_reason": "",
+      "trace": [
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "先计算 （88 + 12）× 15，再把计算结果写入文件 calc_943.txt。"
+          "tool": "calculator",
+          "detail": "8192"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 calc_39.txt，共 4 字符"
+        }
+      ]
+    },
+    {
+      "id": "T33",
+      "level": "medium",
+      "task": "先计算 （88 + 12）× 15，再把计算结果写入文件 calc_943.txt。",
+      "success": true,
+      "reason": "ok",
+      "answer": "（88 + 12）× 15 = 1500，已写入 calc_943.txt。",
+      "steps": 3,
+      "tool_calls": 2,
+      "tool_errors": 0,
+      "failure_reason": "",
+      "trace": [
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "1500"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 calc_943.txt，共 5 字符"
         }
       ]
     },
@@ -768,8 +876,8 @@
       "task": "把文本「项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线」写入 todo.txt，然后读出来确认内容无误。",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：已写入 todo.txt，共 61 字符 | 把文本「项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线」写入 todo.txt，然后读出来确认内容无误。",
-      "steps": 2,
+      "answer": "已写入并读回确认：todo.txt 内容为「项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线」，共 32 字符，与原文完全一致。",
+      "steps": 3,
       "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
@@ -778,13 +886,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "file_write",
-          "detail": "已写入 todo.txt，共 61 字符"
+          "detail": "已写入 todo.txt，共 32 字符"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
           "tool": "file_read",
-          "detail": "把文本「项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线」写入 todo.txt，然后读出来确认内容无误。"
+          "detail": "项目交付清单：RAG 检索模块、Agent 调度模块、评测流水线"
         }
       ]
     },
@@ -792,11 +900,11 @@
       "id": "T35",
       "level": "medium",
       "task": "运营部的平均工资比全公司平均工资高多少元（取整数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 650±1.5）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "运营部平均工资 24500 元，全公司平均工资 23850 元，运营部比全公司平均高 **650 元**。",
+      "steps": 3,
+      "tool_calls": 3,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -804,7 +912,19 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"name\": \"市场部\", \"avg_salary\": 22500.0}, {\"name\": \"研发部\", \"avg_salary\": 28333.333333333332}, {\"name\": \"运营部\", \"avg_salary\""
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"company_avg\": 23850.0}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "650"
         }
       ]
     },
@@ -812,11 +932,11 @@
       "id": "T36",
       "level": "medium",
       "task": "如果给所有员工涨薪 10%，公司每月要多支出多少元（取整数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 23850±2.0）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "给全部 10 名员工涨薪 10%，公司每月要多支出 **23850 元**（当前月薪总额 238500 元 × 10%）。",
+      "steps": 3,
+      "tool_calls": 3,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -824,7 +944,19 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"total_salary\": 238500, \"cnt\": 10}]"
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "current_date",
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:50:11\"}"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "23850"
         }
       ]
     },
@@ -832,25 +964,37 @@
       "id": "T37",
       "level": "medium",
       "task": "把全公司员工的平均工资（取整数）写入文件 avg_salary.txt。",
-      "success": false,
-      "reason": "文件 avg_salary.txt 缺失或不含 23850",
-      "answer": "根据工具结果：已写入 avg_salary.txt，共 36 字符 | 把全公司员工的平均工资（取整数）写入文件 avg_salary.txt。",
-      "steps": 2,
-      "tool_calls": 2,
+      "success": true,
+      "reason": "ok",
+      "answer": "全公司 10 名员工工资总额 238500 元，平均工资为 **23850 元**，已写入 avg_salary.txt。",
+      "steps": 4,
+      "tool_calls": 4,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 avg_salary.txt，共 36 字符"
+          "tool": "sqlite_query",
+          "detail": "[{\"cnt\": 10, \"total\": 238500}]"
         },
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "把全公司员工的平均工资（取整数）写入文件 avg_salary.txt。"
+          "tool": "current_date",
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:50:14\"}"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "23850"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 avg_salary.txt，共 42 字符"
         }
       ]
     },
@@ -858,25 +1002,43 @@
       "id": "T38",
       "level": "medium",
       "task": "2021 年入职的员工占全公司总人数的百分比是多少（保留一位小数）？把结果写入 ratio2021.txt。",
-      "success": false,
-      "reason": "文件 ratio2021.txt 缺失或不含 30.0",
-      "answer": "根据工具结果：已写入 ratio2021.txt，共 54 字符 | 2021 年入职的员工占全公司总人数的百分比是多少（保留一位小数）？把结果写入 ratio2021.txt。",
-      "steps": 2,
-      "tool_calls": 2,
+      "success": true,
+      "reason": "ok",
+      "answer": "2021 年入职员工占全公司总人数的 **30.0%**（2021 年入职 3 人，全公司共 10 人），结果已写入 ratio2021.txt。",
+      "steps": 5,
+      "tool_calls": 5,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 ratio2021.txt，共 54 字符"
+          "tool": "sqlite_query",
+          "detail": "[{\"total\": 10}]"
         },
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "2021 年入职的员工占全公司总人数的百分比是多少（保留一位小数）？把结果写入 ratio2021.txt。"
+          "tool": "sqlite_query",
+          "detail": "[{\"c2021\": 3}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "30"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 ratio2021.txt，共 52 字符"
         }
       ]
     },
@@ -886,48 +1048,8 @@
       "task": "在 2020 年及以前入职、且工资高于 20000 元的员工有多少人？",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
-        }
-      ]
-    },
-    {
-      "id": "T40",
-      "level": "medium",
-      "task": "工资高于全公司平均工资的员工有多少人？",
-      "success": false,
-      "reason": "数值不匹配（期望 5±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
-        }
-      ]
-    },
-    {
-      "id": "T41",
-      "level": "hard",
-      "task": "统计每个部门的平均工资，找出平均工资最高的那个部门，把部门名称和它的平均工资写入 best_dept.md。",
-      "success": false,
-      "reason": "文件 best_dept.md 缺失或不含 研发部",
-      "answer": "根据工具结果：已写入 best_dept.md，共 54 字符 | 统计每个部门的平均工资，找出平均工资最高的那个部门，把部门名称和它的平均工资写入 best_dept.md。",
-      "steps": 2,
+      "answer": "2020 年及以前入职且工资高于 20000 元的员工共有 **4 人**（李娜 32000、孙悦 22000、吴芳 21000、马云龙 26000）。",
+      "steps": 3,
       "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
@@ -935,14 +1057,96 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 best_dept.md，共 54 字符"
+          "tool": "sqlite_query",
+          "detail": "[{\"cnt\": 4}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"李娜\", \"hire_date\": \"2020-07-01\", \"salary\": 32000}, {\"name\": \"孙悦\", \"hire_date\": \"2019-05-30\", \"salary\": 22000},"
+        }
+      ]
+    },
+    {
+      "id": "T40",
+      "level": "medium",
+      "task": "工资高于全公司平均工资的员工有多少人？",
+      "success": true,
+      "reason": "ok",
+      "answer": "全公司平均工资为 23850 元，工资高于该平均值的员工有 **5 人**（全公司共 10 人）。",
+      "steps": 3,
+      "tool_calls": 3,
+      "tool_errors": 0,
+      "failure_reason": "",
+      "trace": [
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"avg_salary\": 23850.0}]"
         },
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "统计每个部门的平均工资，找出平均工资最高的那个部门，把部门名称和它的平均工资写入 best_dept.md。"
+          "tool": "sqlite_query",
+          "detail": "[{\"total\": 10}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"above_avg\": 5}]"
+        }
+      ]
+    },
+    {
+      "id": "T41",
+      "level": "hard",
+      "task": "统计每个部门的平均工资，找出平均工资最高的那个部门，把部门名称和它的平均工资写入 best_dept.md。",
+      "success": true,
+      "reason": "ok",
+      "answer": "平均工资最高的部门是**研发部**，平均工资 **28333.33 元**（3 人：28000+32000+25000），已写入 best_dept.md。",
+      "steps": 5,
+      "tool_calls": 6,
+      "tool_errors": 0,
+      "failure_reason": "",
+      "trace": [
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"departments\"}, {\"name\": \"employees\"}]"
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"研发部\", \"city\": \"上海\"}, {\"id\": 2, \"name\": \"销售部\", \"city\": \"北京\"}, {\"id\": 3, \"name\": \"市场部\", \"city\": \"广州\"},"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"dept\": \"研发部\", \"avg_salary\": 28333.333333333332, \"cnt\": 3}, {\"dept\": \"运营部\", \"avg_salary\": 24500.0, \"cnt\": 2}, {\"dept\":"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"dept\": \"研发部\", \"name\": \"张伟\", \"salary\": 28000}, {\"dept\": \"研发部\", \"name\": \"李娜\", \"salary\": 32000}, {\"dept\": \"研发部\", \"name\":"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "28333.333333333332"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 best_dept.md，共 271 字符"
         }
       ]
     },
@@ -952,35 +1156,9 @@
       "task": "请做一份简易人力成本报告：先算出公司月度工资总额（SUM），再算出年度总额（×12），最后把这两个数字写入 cost_report.md。",
       "success": false,
       "reason": "文件 cost_report.md 缺失或不含 238500",
-      "answer": "根据工具结果：已写入 cost_report.md，共 69 字符 | 请做一份简易人力成本报告：先算出公司月度工资总额（SUM），再算出年度总额（×12），最后把这两个数字写入 cost_report.md。",
-      "steps": 2,
-      "tool_calls": 2,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 cost_report.md，共 69 字符"
-        },
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "请做一份简易人力成本报告：先算出公司月度工资总额（SUM），再算出年度总额（×12），最后把这两个数字写入 cost_report.md。"
-        }
-      ]
-    },
-    {
-      "id": "T43",
-      "level": "hard",
-      "task": "工资高于全公司平均工资的员工占总人数的百分比是多少（保留一位小数）？",
-      "success": false,
-      "reason": "数值不匹配（期望 50.0±0.6）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "answer": "报告已完成并写入 cost_report.md：公司 10 名员工月度工资总额为 238,500 元，按 12 个月折算年度总额为 2,862,000 元。",
+      "steps": 4,
+      "tool_calls": 4,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -988,7 +1166,57 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"monthly_total\": 238500, \"emp_count\": 10}]"
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "current_date",
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:50:36\"}"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "2862000"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 cost_report.md，共 253 字符"
+        }
+      ]
+    },
+    {
+      "id": "T43",
+      "level": "hard",
+      "task": "工资高于全公司平均工资的员工占总人数的百分比是多少（保留一位小数）？",
+      "success": true,
+      "reason": "ok",
+      "answer": "全公司平均工资为 23850 元，10 名员工中有 5 人工资高于该平均值，占比 **50.0%**。",
+      "steps": 3,
+      "tool_calls": 3,
+      "tool_errors": 0,
+      "failure_reason": "",
+      "trace": [
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"avg_salary\": 23850.0, \"total\": 10}]"
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"above_avg\": 5}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "50"
         }
       ]
     },
@@ -996,11 +1224,11 @@
       "id": "T44",
       "level": "hard",
       "task": "先查今天是几号，再算出距离今年 12 月 31 日还有多少天，把天数写入 countdown.txt。",
-      "success": false,
-      "reason": "文件 countdown.txt 缺失或不含 90",
-      "answer": "根据工具结果：{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "今天是 2026-10-02（周五），距离 2026 年 12 月 31 日还有 **90 天**（10月剩29天 + 11月30天 + 12月31天），已写入 countdown.txt。",
+      "steps": 4,
+      "tool_calls": 3,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -1008,7 +1236,19 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "current_date",
-          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 22:11:04\"}"
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:50:44\"}"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "90"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 countdown.txt，共 47 字符"
         }
       ]
     },
@@ -1018,8 +1258,8 @@
       "task": "先搜索「什么是 MCP」，再把搜索结果的摘要写入 mcp_note.md。",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：已写入 mcp_note.md，共 37 字符 | 先搜索「什么是 MCP」，再把搜索结果的摘要写入 mcp_note.md。",
-      "steps": 2,
+      "answer": "已完成：搜索结果显示 MCP（Model Context Protocol）是把外部数据与工具接入大模型客户端的开放协议，该摘要已写入 mcp_note.md（共 61 字符）。",
+      "steps": 3,
       "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
@@ -1027,14 +1267,14 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 mcp_note.md，共 37 字符"
+          "tool": "web_search",
+          "detail": "MCP（Model Context Protocol）是把外部数据与工具接入大模型客户端的开放协议。"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "先搜索「什么是 MCP」，再把搜索结果的摘要写入 mcp_note.md。"
+          "tool": "file_write",
+          "detail": "已写入 mcp_note.md，共 61 字符"
         }
       ]
     },
@@ -1042,11 +1282,11 @@
       "id": "T46",
       "level": "hard",
       "task": "公司内最高工资与最低工资的差距是多少元？并把差距占最高工资的比例（百分比，保留一位小数）一并告诉我。",
-      "success": false,
-      "reason": "数值不匹配（期望 14000±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
+      "success": true,
+      "reason": "ok",
+      "answer": "公司最高工资 32000 元、最低工资 18000 元，差距为 **14000 元**，占最高工资的 **43.8%**（43.75% 保留一位小数）。",
+      "steps": 3,
+      "tool_calls": 3,
       "tool_errors": 0,
       "failure_reason": "",
       "trace": [
@@ -1054,7 +1294,19 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
-          "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+          "detail": "[{\"max_sal\": 32000, \"min_sal\": 18000}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "14000"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "43.75"
         }
       ]
     },
@@ -1064,8 +1316,8 @@
       "task": "先把「1. 需求分析\n2. 原型设计\n3. 开发联调」写入 plan.md，然后读回文件，告诉我一共有几个步骤。",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：已写入 plan.md，共 56 字符 | 先把「1. 需求分析\n2. 原型设计\n3. 开发联调」写入 plan.md，然后读回文件，告诉我一共有几个步骤。",
-      "steps": 2,
+      "answer": "已写入并读回 plan.md，内容为「1. 需求分析 / 2. 原型设计 / 3. 开发联调」，共 **3 个步骤**。",
+      "steps": 3,
       "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
@@ -1074,13 +1326,13 @@
           "step": 1,
           "type": "tool_ok",
           "tool": "file_write",
-          "detail": "已写入 plan.md，共 56 字符"
+          "detail": "已写入 plan.md，共 23 字符"
         },
         {
-          "step": 1,
+          "step": 2,
           "type": "tool_ok",
           "tool": "file_read",
-          "detail": "先把「1. 需求分析\n2. 原型设计\n3. 开发联调」写入 plan.md，然后读回文件，告诉我一共有几个步骤。"
+          "detail": "1. 需求分析\n2. 原型设计\n3. 开发联调"
         }
       ]
     },
@@ -1090,17 +1342,41 @@
       "task": "在北京办公的部门里共有多少名员工？（城市信息在 departments 表）",
       "success": true,
       "reason": "ok",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
+      "answer": "在北京办公的部门是销售部（dept_id=2），该部门共有 **3 名员工**。",
+      "steps": 5,
+      "tool_calls": 5,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"研发部\", \"city\": \"上海\"}, {\"id\": 2, \"name\": \"销售部\", \"city\": \"北京\"}, {\"id\": 3, \"name\": \"市场部\", \"city\": \"广州\"},"
+        },
+        {
+          "step": 1,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"cnt\": 10}]"
+        },
+        {
+          "step": 2,
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: department_id"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
           "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"cnt\": 3}]"
         }
       ]
     },
@@ -1108,30 +1384,10 @@
       "id": "T49",
       "level": "hard",
       "task": "给我一份员工名单：写出工资排名前三的员工姓名，并用逗号分隔写进 top3.txt。",
-      "success": false,
-      "reason": "文件 top3.txt 缺失或不含 李娜",
-      "answer": "根据工具结果：[本地桩] 未接入真实搜索：给我一份员工名单：写出工资排名前三的员工姓名，并用逗号分隔写进 top3.txt。",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
-      "failure_reason": "",
-      "trace": [
-        {
-          "step": 1,
-          "type": "tool_ok",
-          "tool": "web_search",
-          "detail": "[本地桩] 未接入真实搜索：给我一份员工名单：写出工资排名前三的员工姓名，并用逗号分隔写进 top3.txt。"
-        }
-      ]
-    },
-    {
-      "id": "T50",
-      "level": "hard",
-      "task": "如果研发部全员涨薪 15%，研发部新的月工资总额是多少元（取整数）？把结果写入 dev_new_total.txt。",
-      "success": false,
-      "reason": "文件 dev_new_total.txt 缺失或不含 97750",
-      "answer": "根据工具结果：已写入 dev_new_total.txt，共 58 字符 | 如果研发部全员涨薪 15%，研发部新的月工资总额是多少元（取整数）？把结果写入 dev_new_total.txt。",
-      "steps": 2,
+      "success": true,
+      "reason": "ok",
+      "answer": "工资排名前三的员工是李娜（32000）、张伟（28000）、马云龙（26000），已按逗号分隔写入 top3.txt。",
+      "steps": 3,
       "tool_calls": 2,
       "tool_errors": 0,
       "failure_reason": "",
@@ -1139,14 +1395,64 @@
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_write",
-          "detail": "已写入 dev_new_total.txt，共 58 字符"
+          "tool": "sqlite_query",
+          "detail": "[{\"name\": \"李娜\", \"salary\": 32000}, {\"name\": \"张伟\", \"salary\": 28000}, {\"name\": \"马云龙\", \"salary\": 26000}]"
         },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 top3.txt，共 9 字符"
+        }
+      ]
+    },
+    {
+      "id": "T50",
+      "level": "hard",
+      "task": "如果研发部全员涨薪 15%，研发部新的月工资总额是多少元（取整数）？把结果写入 dev_new_total.txt。",
+      "success": true,
+      "reason": "ok",
+      "answer": "研发部原月工资总额为 85000 元（张伟 28000 + 李娜 32000 + 王强 25000），全员涨薪 15% 后新总额为 **97750 元**，已写入 dev_new_total.txt。",
+      "steps": 6,
+      "tool_calls": 6,
+      "tool_errors": 1,
+      "failure_reason": "",
+      "trace": [
         {
           "step": 1,
           "type": "tool_ok",
-          "tool": "file_read",
-          "detail": "如果研发部全员涨薪 15%，研发部新的月工资总额是多少元（取整数）？把结果写入 dev_new_total.txt。"
+          "tool": "current_date",
+          "detail": "{\"date\": \"2026-10-02\", \"weekday\": \"周五\", \"datetime\": \"2026-10-02 23:51:06\"}"
+        },
+        {
+          "step": 1,
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: e.department_id"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"sql\": \"CREATE TABLE departments (\\n    id INTEGER PRIMARY KEY,\\n    name TEXT NOT NULL,\\n    city TEXT NOT NULL\\n)\"},"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"dept\": \"研发部\", \"name\": \"张伟\", \"salary\": 28000}, {\"dept\": \"研发部\", \"name\": \"李娜\", \"salary\": 32000}, {\"dept\": \"研发部\", \"name\":"
+        },
+        {
+          "step": 4,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "97749.99999999999"
+        },
+        {
+          "step": 5,
+          "type": "tool_ok",
+          "tool": "file_write",
+          "detail": "已写入 dev_new_total.txt，共 128 字符"
         }
       ]
     },
@@ -1154,25 +1460,56 @@
       "id": "T51",
       "level": "hard",
       "task": "请告诉我三件事：公司总人数、平均工资（取整数）、以及人数最多的部门。三项都要回答。",
-      "success": false,
-      "reason": "数值不匹配（期望 10±0.51）",
-      "answer": "根据工具结果：[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1, \"salary\": 32000, \"hire_date\": \"2020-07-01\"}, {\"id\": 3, \"name\": \"王强\", \"dept_id\": 1, \"salary\": 25000, \"hire_date\": \"2022-11-20\"}, {\"id\": 4, \"name\": \"赵敏\", \"dept_id\": 2, \"sala",
-      "steps": 2,
-      "tool_calls": 1,
-      "tool_errors": 0,
+      "success": true,
+      "reason": "ok",
+      "answer": "公司总人数 10 人，平均工资 23850 元（AVG 结果恰为整数 23850.0），人数最多的部门是销售部和研发部并列，各 3 人。",
+      "steps": 4,
+      "tool_calls": 6,
+      "tool_errors": 1,
       "failure_reason": "",
       "trace": [
         {
           "step": 1,
           "type": "tool_ok",
           "tool": "sqlite_query",
+          "detail": "[{\"total\": 10, \"avg_salary\": 23850.0}]"
+        },
+        {
+          "step": 1,
+          "type": "tool_error",
+          "tool": "sqlite_query",
+          "detail": "SQL 执行错误: no such column: department_id"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
           "detail": "[{\"id\": 1, \"name\": \"张伟\", \"dept_id\": 1, \"salary\": 28000, \"hire_date\": \"2021-03-15\"}, {\"id\": 2, \"name\": \"李娜\", \"dept_id\": 1"
+        },
+        {
+          "step": 2,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"id\": 1, \"name\": \"研发部\", \"city\": \"上海\"}, {\"id\": 2, \"name\": \"销售部\", \"city\": \"北京\"}, {\"id\": 3, \"name\": \"市场部\", \"city\": \"广州\"},"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "sqlite_query",
+          "detail": "[{\"dept\": \"销售部\", \"cnt\": 3}, {\"dept\": \"研发部\", \"cnt\": 3}, {\"dept\": \"运营部\", \"cnt\": 2}, {\"dept\": \"市场部\", \"cnt\": 2}]"
+        },
+        {
+          "step": 3,
+          "type": "tool_ok",
+          "tool": "calculator",
+          "detail": "23850"
         }
       ]
     }
   ],
   "failure_taxonomy": {
-    "计算/数值错误": 23,
-    "文件未写出或未读回": 14
+    "未调用日期工具（幻觉）": 2,
+    "工具执行报错": 1,
+    "文件未写出或未读回": 1
   }
 }
